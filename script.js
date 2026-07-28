@@ -173,9 +173,8 @@ document.getElementById("number").innerText="🎉 COMPLETE";
 
 document.getElementById("reason").innerHTML=`
 
-<h2>読んでくれてありがとう。</h2>
+<h2>ちゅー😽</h2>
 
-これからも増え続けるんだろうなって思っているお。
 
 `;
 
@@ -256,6 +255,34 @@ comment;
 fill.style.width =
 Math.min(affection,100) + "%";
 
+if(affection>=100){
+
+albireo1.animate([
+
+{transform:"scale(1) rotate(0deg)"},
+{transform:"scale(3) rotate(180deg)"},
+{transform:"scale(1) rotate(360deg)"}
+
+],{
+
+duration:1500
+
+});
+
+albireo2.animate([
+
+{transform:"scale(1)"},
+{transform:"scale(2.5)"},
+{transform:"scale(1)"}
+
+],{
+
+duration:1500
+
+});
+
+}
+
 fill.innerText =
 affection + "%";
 
@@ -311,3 +338,67 @@ stars.appendChild(albireo1);
 stars.appendChild(albireo2);
 
 }
+
+setInterval(()=>{
+
+albireo1.animate([
+
+{transform:"scale(1)",opacity:1},
+{transform:"scale(2)",opacity:1},
+{transform:"scale(1)",opacity:1}
+
+],{
+
+duration:1800
+
+});
+
+albireo2.animate([
+
+{transform:"scale(1)",opacity:1},
+{transform:"scale(2)",opacity:1},
+{transform:"scale(1)",opacity:1}
+
+],{
+
+duration:1800
+
+});
+
+},4000);
+
+
+function shootingStar(){
+
+const star=document.createElement("div");
+
+star.innerHTML="✨";
+
+star.style.position="fixed";
+star.style.left=Math.random()*60+"vw";
+star.style.top="-40px";
+
+star.style.fontSize="22px";
+
+star.style.transition="2s linear";
+
+star.style.zIndex="-1";
+
+document.body.appendChild(star);
+
+setTimeout(()=>{
+
+star.style.transform="translate(500px,500px)";
+star.style.opacity="0";
+
+},50);
+
+setTimeout(()=>{
+
+star.remove();
+
+},2200);
+
+}
+
+setInterval(shootingStar,9000);
