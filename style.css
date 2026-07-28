@@ -79,15 +79,15 @@ transform:scale(.9);
 ========================= */
 
 h1{
-color:#f3c7ff;
+color:#bfe8ff;
 
 font-size:34px;
 
 margin-bottom:5px;
 
 text-shadow:
-0 0 10px rgba(243,199,255,.8),
-0 0 25px rgba(220,180,255,.5);
+0 0 10px rgba(191,232,255,.8),
+0 0 25px rgba(100,180,255,.5);
 }
 
 .subtitle{
@@ -106,8 +106,8 @@ button{
 
 background:linear-gradient(
 135deg,
-#e8b7ff,
-#b08cff
+#8ed8ff,
+#3d82f6
 );
 color:white;
 
@@ -125,7 +125,7 @@ cursor:pointer;
 
 transition:.25s;
 
-box-shadow:0 8px 20px rgba(220,180,255,.6);
+box-shadow:0 0 20px rgba(100,180,255,.6);
 
 }
 
@@ -159,7 +159,7 @@ box-shadow:
 }
 
 .number{
-color:#ffd6f3;
+color:#aee7ff;
 
 font-weight:bold;
 
@@ -168,7 +168,7 @@ font-size:22px;
 margin-bottom:18px;
 
 text-shadow:
-0 0 10px rgba(255,214,243,.8);
+0 0 10px rgba(174,231,255,.8);
 }
 
 #reason{
@@ -209,8 +209,10 @@ text-align:left;
 
 text-align:center;
 
-color:#ff5f99;
+color:#bfe8ff;
 
+   text-shadow:
+   0 0 10px rgba(191,232,255,.7);
 margin-bottom:20px;
 
 }
