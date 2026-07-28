@@ -543,4 +543,7 @@ margin:20px auto;
 
 }
 
+.card,
+.future-card{
+background:rgba(255,255,255,.93);
 }
