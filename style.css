@@ -6,23 +6,35 @@ body{
     margin:0;
     font-family:"M PLUS Rounded 1c",sans-serif;
     color:#444;
+body{
+    margin:0;
+    font-family:"M PLUS Rounded 1c",sans-serif;
+    color:#444;
 
     background:
-        radial-gradient(circle at 20% 20%,rgba(255,255,255,.9) 1px,transparent 2px),
-        radial-gradient(circle at 80% 15%,rgba(255,255,255,.8) 1px,transparent 2px),
-        radial-gradient(circle at 60% 75%,rgba(255,255,255,.9) 1px,transparent 2px),
-        radial-gradient(circle at 10% 70%,rgba(255,255,255,.8) 1px,transparent 2px),
-        linear-gradient(180deg,#fff8fc,#f6f3ff,#eef5ff);
+    radial-gradient(circle at top,#26366d 0%,#101730 45%,#070b18 100%);
 
-    background-size:
-        260px 260px,
-        330px 330px,
-        280px 280px,
-        300px 300px,
-        100% 100%;
-
-    background-attachment:fixed;
+    overflow-x:hidden;
+    position:relative;
 }
+
+
+#stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    opacity:.2;
+    animation:twinkle 3s infinite ease-in-out;
+}
+
+
 
 /* 星空 */
 
