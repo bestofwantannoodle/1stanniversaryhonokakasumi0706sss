@@ -402,3 +402,36 @@ star.remove();
 }
 
 setInterval(shootingStar,9000);
+
+
+// =========================
+// これからしたいこと チェック状態保存
+// =========================
+
+const checkboxes = document.querySelectorAll(
+  '.future-card input[type="checkbox"]'
+);
+
+checkboxes.forEach((checkbox, index) => {
+
+  // 保存された状態を読み込み
+  const saved = localStorage.getItem(
+    "future-check-" + index
+  );
+
+  if(saved === "true"){
+    checkbox.checked = true;
+  }
+
+
+  // チェック変更時に保存
+  checkbox.addEventListener("change", () => {
+
+    localStorage.setItem(
+      "future-check-" + index,
+      checkbox.checked
+    );
+
+  });
+
+});
