@@ -135,8 +135,11 @@ popup.classList.remove("show");
 function heart(){
 
 const heart=document.createElement("div");
+  
+const stars = ["⭐","✨","🌟"];
 
-heart.innerHTML="💜";
+heart.innerHTML =
+stars[Math.floor(Math.random()*stars.length)];
 
 heart.style.position="fixed";
 heart.style.left=Math.random()*90+"vw";
@@ -246,16 +249,16 @@ localStorage.setItem("check"+index,check.checked);
 
 };
 
+const fill = document.getElementById("meterFill");
+
 document.getElementById("lovePercent").innerText =
 affection + "%";
 
 document.getElementById("loveComment").innerText =
 comment;
 
-document.getElementById("meterFill").style.width =
-Math.min(affection,100)+"%";
+fill.style.width =
+Math.min(affection,100) + "%";
 
-const fill = document.getElementById("meterFill");
-
-fill.style.width = Math.min(affection,100) + "%";
-fill.innerText = affection + "%";
+fill.innerText =
+affection + "%";
