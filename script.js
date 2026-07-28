@@ -1,6 +1,6 @@
 const affection = 98.0;
 
-const comment ="しゅき",
+const comment ="しゅき";
 
 // ===============================
 // 
