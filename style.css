@@ -1,256 +1,541 @@
+/* =========================
+   全体
+========================= */
 
 body{
     margin:0;
     font-family:"M PLUS Rounded 1c",sans-serif;
-    background:linear-gradient(180deg,#fff7fb,#ffeef6,#fffafc);
     color:#444;
+
+    background:
+        radial-gradient(circle at 20% 20%,rgba(255,255,255,.9) 1px,transparent 2px),
+        radial-gradient(circle at 80% 15%,rgba(255,255,255,.8) 1px,transparent 2px),
+        radial-gradient(circle at 60% 75%,rgba(255,255,255,.9) 1px,transparent 2px),
+        radial-gradient(circle at 10% 70%,rgba(255,255,255,.8) 1px,transparent 2px),
+        linear-gradient(180deg,#fff8fc,#f6f3ff,#eef5ff);
+
+    background-size:
+        260px 260px,
+        330px 330px,
+        280px 280px,
+        300px 300px,
+        100% 100%;
+
+    background-attachment:fixed;
 }
+
+/* 星空 */
+
+#stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    opacity:.4;
+    animation:twinkle 3s infinite alternate;
+}
+
+@keyframes twinkle{
+
+0%{
+opacity:.2;
+transform:scale(.8);
+}
+
+50%{
+opacity:1;
+transform:scale(1.5);
+}
+
+100%{
+opacity:.4;
+transform:scale(.9);
+}
+
+}
+
+/* =========================
+   コンテナ
+========================= */
 
 .container{
     width:90%;
     max-width:700px;
-    margin:40px auto;
-    background:white;
-    border-radius:30px;
+    margin:50px auto;
     padding:35px;
-    box-shadow:0 15px 40px rgba(255,107,157,.15);
+
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(10px);
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 40px rgba(255,107,157,.15);
+
     text-align:center;
 }
 
+/* =========================
+   タイトル
+========================= */
+
 h1{
-    color:#ff5f99;
-    font-size:34px;
-    margin-bottom:5px;
+
+color:#ff5f99;
+
+font-size:34px;
+
+margin-bottom:5px;
+
 }
 
 .subtitle{
-    color:#999;
-    margin-bottom:30px;
+
+color:#999;
+
+margin-bottom:30px;
+
 }
 
+/* =========================
+   ボタン
+========================= */
+
 button{
-    background:linear-gradient(135deg,#ff8bb8,#ff5f99);
-    color:white;
-    border:none;
-    padding:18px 45px;
-    border-radius:999px;
-    font-size:20px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.25s;
-    box-shadow:0 8px 20px rgba(255,95,153,.35);
+
+background:linear-gradient(135deg,#ff9fc8,#ff5f99);
+
+color:white;
+
+border:none;
+
+padding:18px 45px;
+
+border-radius:999px;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.25s;
+
+box-shadow:0 8px 20px rgba(255,95,153,.35);
+
 }
 
 button:hover{
-    transform:scale(1.05);
+
+transform:scale(1.05);
+
 }
 
 button:active{
-    transform:scale(.97);
+
+transform:scale(.97);
+
 }
 
+/* =========================
+   好きなところカード
+========================= */
+
 .card{
-    margin-top:35px;
-    background:white;
-    border-radius:25px;
-    padding:35px;
-    border:3px solid #ffe0ec;
-    box-shadow:0 10px 25px rgba(255,95,153,.12);
-    min-height:170px;
+
+margin-top:35px;
+
+background:rgba(255,255,255,.95);
+
+border-radius:25px;
+
+padding:35px;
+
+border:3px solid #ffe0ec;
+
+box-shadow:0 10px 25px rgba(255,95,153,.12);
+
+min-height:170px;
+
+animation:fade .3s;
+
 }
 
 .number{
-    color:#ff5f99;
-    font-weight:bold;
-    font-size:22px;
-    margin-bottom:18px;
+
+color:#ff5f99;
+
+font-weight:bold;
+
+font-size:22px;
+
+margin-bottom:18px;
+
 }
 
 #reason{
-    font-size:25px;
-    line-height:1.7;
-    font-weight:bold;
+
+font-size:25px;
+
+line-height:1.7;
+
+font-weight:bold;
+
 }
 
+/* =========================
+   これからしたいこと
+========================= */
+
 .future-card{
-    margin-top:40px;
-    background:white;
-    padding:30px;
-    border-radius:25px;
-    border:3px solid #ffe0ec;
-    box-shadow:0 10px 25px rgba(255,95,153,.12);
-    text-align:left;
+
+margin-top:40px;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(8px);
+
+padding:30px;
+
+border-radius:25px;
+
+border:3px solid #ffe0ec;
+
+box-shadow:0 10px 25px rgba(255,95,153,.12);
+
+text-align:left;
+
 }
 
 .future-card h2{
-    text-align:center;
-    color:#ff5f99;
-    margin-bottom:20px;
+
+text-align:center;
+
+color:#ff5f99;
+
+margin-bottom:20px;
+
 }
 
 .future-card ul{
-    list-style:none;
-    padding:0;
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
 }
 
 .future-card li{
-    margin:12px 0;
+
+margin:12px 0;
+
 }
 
 .future-card label{
-    cursor:pointer;
-    display:flex;
-    align-items:center;
+
+display:flex;
+
+align-items:center;
+
+cursor:pointer;
+
 }
 
-.future-card input[type=checkbox]{
-    transform:scale(1.35);
-    margin-right:12px;
-    accent-color:#ff5f99;
+.future-card input[type="checkbox"]{
+
+transform:scale(1.3);
+
+margin-right:12px;
+
+accent-color:#ff5f99;
+
 }
 
-.future-card input[type=checkbox]:checked + span{
-    text-decoration:line-through;
-    color:#999;
+.future-card input[type="checkbox"]:checked+span{
+
+text-decoration:line-through;
+
+color:#999;
+
 }
 
 .future-message{
-    text-align:center;
-    color:#999;
-    margin-top:30px;
-    font-size:15px;
+
+text-align:center;
+
+margin-top:30px;
+
+font-size:15px;
+
+color:#999;
+
 }
 
+/* =========================
+   Albireo Meter
+========================= */
+
+.love-meter{
+
+position:fixed;
+
+top:20px;
+
+right:20px;
+
+width:240px;
+
+padding:18px;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(12px);
+
+border-radius:22px;
+
+border:2px solid #ffe3ef;
+
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+z-index:999;
+
+}
+
+.love-title{
+
+font-size:17px;
+
+font-weight:bold;
+
+color:#ff5f99;
+
+margin-bottom:12px;
+
+text-align:center;
+
+}
+
+.meter{
+
+width:100%;
+
+height:20px;
+
+background:#ffe3ef;
+
+border-radius:999px;
+
+overflow:hidden;
+
+}
+
+.meter-fill{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100%;
+
+width:0;
+
+background:linear-gradient(90deg,#ffb6d5,#ff80b6,#ff5f99);
+
+color:white;
+
+font-size:12px;
+
+font-weight:bold;
+
+transition:width .8s ease;
+
+}
+
+.love-percent{
+
+display:none;
+
+}
+
+.love-comment{
+
+margin-top:10px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#888;
+
+line-height:1.5;
+
+}
+
+.albireo{
+
+margin-top:12px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#b08cff;
+
+font-style:italic;
+
+}
+
+/* =========================
+   Popup
+========================= */
+
 .popup{
-    position:fixed;
-    top:-100px;
-    left:50%;
-    transform:translateX(-50%);
-    background:white;
-    color:#ff5f99;
-    padding:18px 28px;
-    border-radius:20px;
-    font-weight:bold;
-    box-shadow:0 8px 25px rgba(0,0,0,.15);
-    transition:.5s;
-    z-index:999;
+
+position:fixed;
+
+top:-100px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+background:white;
+
+padding:18px 28px;
+
+border-radius:20px;
+
+color:#ff5f99;
+
+font-weight:bold;
+
+box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+transition:.5s;
+
+z-index:9999;
+
 }
 
 .popup.show{
-    top:30px;
+
+top:30px;
+
 }
 
+/* =========================
+   アニメーション
+========================= */
+
 .complete{
-    animation:pop .5s ease;
+
+animation:pop .5s ease;
+
 }
 
 @keyframes pop{
 
 0%{
+
 transform:scale(.7);
+
 opacity:0;
+
 }
 
 70%{
+
 transform:scale(1.05);
+
 }
 
 100%{
+
 transform:scale(1);
+
 opacity:1;
-}
 
 }
 
-.card{
-animation:fade .3s;
 }
 
 @keyframes fade{
 
 from{
+
 opacity:.5;
+
 transform:translateY(10px);
+
 }
 
 to{
+
 opacity:1;
+
 transform:translateY(0);
+
 }
 
 }
+
+/* =========================
+   スマホ
+========================= */
 
 @media(max-width:600px){
 
+.container{
+
+width:92%;
+
+padding:25px;
+
+margin-top:100px;
+
+}
+
 h1{
+
 font-size:28px;
+
 }
 
 button{
+
 width:100%;
+
 }
 
 #reason{
+
 font-size:22px;
-}
-
-
-    .love-comment{
-...
-}
-
-@media(max-width:600px){
-
-h1{
-font-size:28px;
-}
-
-button{
-width:100%;
-}
-
-#reason{
-font-size:22px;
-}
-
-    .love-meter{
-    position:fixed;
-    top:20px;
-    right:20px;
-    width:240px;
-    background:rgba(255,255,255,.92);
-    backdrop-filter:blur(10px);
-    padding:18px;
-    border-radius:22px;
-    border:2px solid #ffe3ef;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.meter{
-    width:100%;
-    height:18px;   /* ←太くする */
-    background:#f7dce7;
-    border-radius:999px;
-    overflow:hidden;
-    margin-top:12px;
-}
-
-.meter-fill{
-    height:100%;
-    border-radius:999px;
-    background:linear-gradient(90deg,#ffb3d1,#ff7bb3,#ff5f99);
-    transition:width .8s ease;
-}
-
-.love-percent{
-    text-align:right;
-    font-size:15px;
-    font-weight:bold;
-    color:#ff5f99;
-    margin-top:6px;
-}
-
-
 
 }
 
+.love-meter{
+
+position:relative;
+
+top:auto;
+
+right:auto;
+
+width:90%;
+
+margin:20px auto;
+
+}
+
+}
