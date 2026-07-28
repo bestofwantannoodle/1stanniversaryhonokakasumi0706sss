@@ -60,17 +60,19 @@ transform:scale(.9);
     max-width:700px;
     margin:40px auto;
 
-    background:rgba(255,255,255,.88);
+    background:rgba(255,220,245,.12);
 
     backdrop-filter:blur(18px);
 
+    border:1px solid rgba(255,220,245,.35);
+   
     border-radius:30px;
 
     padding:35px;
 
-    box-shadow:0 20px 50px rgba(0,0,0,.35);
+    box-shadow:0 0 40px rgba(220,180,255,.35);
 
-    text-align:center;
+    text-align:center
 }
 /* =========================
    タイトル
@@ -79,15 +81,13 @@ transform:scale(.9);
 h1{
 color:#f3c7ff;
 
-text-shadow:
-0 0 10px rgba(243,199,255,.8),
-0 0 25px rgba(220,180,255,.5);
-}
-
 font-size:34px;
 
 margin-bottom:5px;
 
+text-shadow:
+0 0 10px rgba(243,199,255,.8),
+0 0 25px rgba(220,180,255,.5);
 }
 
 .subtitle{
@@ -104,8 +104,11 @@ margin-bottom:30px;
 
 button{
 
-background:linear-gradient(135deg,#ff9fc8,#ff5f99);
-
+background:linear-gradient(
+135deg,
+#e8b7ff,
+#b08cff
+);
 color:white;
 
 border:none;
@@ -122,7 +125,7 @@ cursor:pointer;
 
 transition:.25s;
 
-box-shadow:0 8px 20px rgba(255,95,153,.35);
+box-shadow:0 8px 20px rgba(220,180,255,.6);
 
 }
 
@@ -158,16 +161,14 @@ box-shadow:
 .number{
 color:#ffd6f3;
 
-text-shadow:
-0 0 10px rgba(255,214,243,.8);
-}
-
 font-weight:bold;
 
 font-size:22px;
 
 margin-bottom:18px;
 
+text-shadow:
+0 0 10px rgba(255,214,243,.8);
 }
 
 #reason{
@@ -528,7 +529,7 @@ margin:20px auto;
 
 }
 
-.card,
+   .card,
 .future-card{
-background:rgba(255,255,255,.93);
+background:rgba(255,220,245,.12);
 }
