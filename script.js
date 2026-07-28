@@ -254,4 +254,8 @@ comment;
 
 document.getElementById("meterFill").style.width =
 Math.min(affection,100)+"%";
-  
+
+const fill = document.getElementById("meterFill");
+
+fill.style.width = Math.min(affection,100) + "%";
+fill.innerText = affection + "%";
