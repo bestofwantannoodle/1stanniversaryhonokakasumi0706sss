@@ -7,12 +7,12 @@ body{
     font-family:"M PLUS Rounded 1c",sans-serif;
     color:#444;
 
-    background:
-    radial-gradient(circle at top,#26366d 0%,#101730 45%,#070b18 100%);
+    background:#070b18;
 
-    position:relative;
     overflow-x:hidden;
-}
+    position:relative;
+   min-heigt:100vh;
+   }
 
 /* 星空 */
 
@@ -26,10 +26,9 @@ body{
     radial-gradient(circle at top,#26366d 0%,#101730 45%,#070b18 100%);
 }
 
-}
-
 .container,
-.love-meter{
+.love-meter,
+.popup{
     position:relative;
     z-index:1;
 }
@@ -347,7 +346,7 @@ border:2px solid rgba(100,180,255,.45);
 box-shadow:
 0 0 25px rgba(50,130,255,.35);
    
-backdrop-filter:blur(12px);
+/*backdrop-filter:blur(12px);*/
 
 border-radius:22px;
 
