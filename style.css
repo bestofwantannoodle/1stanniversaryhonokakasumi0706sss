@@ -601,3 +601,9 @@ margin:20px auto;
 .future-card{
 background:rgba(255,220,245,.12);
 }
+
+.future-card span{
+    color:white;
+    text-shadow:
+    0 0 8px rgba(255,255,255,.4);
+}
