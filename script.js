@@ -253,4 +253,5 @@ document.getElementById("loveComment").innerText =
 comment;
 
 document.getElementById("meterFill").style.width =
-affection + "%";
+Math.min(affection,100)+"%";
+  
