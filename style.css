@@ -34,7 +34,19 @@ body{
     animation:twinkle 3s infinite ease-in-out;
 }
 
+@keyframes twinkle{
 
+0%,100%{
+opacity:.15;
+transform:scale(.8);
+}
+
+50%{
+opacity:1;
+transform:scale(1.4);
+}
+
+}
 
 /* 星空 */
 
