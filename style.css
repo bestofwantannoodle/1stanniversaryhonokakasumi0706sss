@@ -10,8 +10,8 @@ body{
     background:
     radial-gradient(circle at top,#26366d 0%,#101730 45%,#070b18 100%);
 
-    overflow-x:hidden;
     position:relative;
+    overflow-x:hidden;
 }
 
 /* 星空 */
@@ -19,9 +19,13 @@ body{
 #stars{
     position:fixed;
     inset:0;
-    overflow:hidden;
-    pointer-events:none;
+   overflow:hidden;
+   pointer-events:none;
     z-index:0;
+      background:
+    radial-gradient(circle at top,#26366d 0%,#101730 45%,#070b18 100%);
+}
+
 }
 
 .container,
@@ -29,6 +33,7 @@ body{
     position:relative;
     z-index:1;
 }
+
 .star{
     position:absolute;
     background:white;
