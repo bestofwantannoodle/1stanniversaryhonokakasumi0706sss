@@ -14,36 +14,6 @@ body{
     position:relative;
 }
 
-
-#stars{
-    position:fixed;
-    inset:0;
-    overflow:hidden;
-    z-index:-1;
-}
-
-.star{
-    position:absolute;
-    background:white;
-    border-radius:50%;
-    opacity:.2;
-    animation:twinkle 3s infinite ease-in-out;
-}
-
-@keyframes twinkle{
-
-0%,100%{
-opacity:.15;
-transform:scale(.8);
-}
-
-50%{
-opacity:1;
-transform:scale(1.4);
-}
-
-}
-
 /* 星空 */
 
 #stars{
@@ -107,8 +77,12 @@ transform:scale(.9);
 ========================= */
 
 h1{
+color:#f3c7ff;
 
-color:#ff5f99;
+text-shadow:
+0 0 10px rgba(243,199,255,.8),
+0 0 25px rgba(220,180,255,.5);
+}
 
 font-size:34px;
 
@@ -170,12 +144,23 @@ transform:scale(.97);
 
 .card,
 .future-card{
-background:rgba(255,255,255,.93);
+background:rgba(255,220,245,.12);
+
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,220,245,.4);
+
+box-shadow:
+0 0 25px rgba(220,180,255,.35);
 }
 
 .number{
+color:#ffd6f3;
 
-color:#ff5f99;
+text-shadow:
+0 0 10px rgba(255,214,243,.8);
+}
 
 font-weight:bold;
 
@@ -203,7 +188,7 @@ font-weight:bold;
 
 margin-top:40px;
 
-background:rgba(255,255,255,.92);
+background:rgba(255,220,245,.12);
 
 backdrop-filter:blur(8px);
 
