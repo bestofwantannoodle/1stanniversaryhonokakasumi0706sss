@@ -133,36 +133,6 @@ popup.classList.remove("show");
 
 }
 
-function heart(){
-
-const heart=document.createElement("div");
-  
-const stars = ["⭐","✨","🌟"];
-
-heart.innerHTML =
-stars[Math.floor(Math.random()*stars.length)];
-
-heart.style.position="fixed";
-heart.style.left=Math.random()*90+"vw";
-heart.style.bottom="-30px";
-heart.style.fontSize=(20+Math.random()*20)+"px";
-heart.style.pointerEvents="none";
-heart.style.transition="all 3s linear";
-heart.style.opacity="1";
-
-document.body.appendChild(heart);
-
-setTimeout(()=>{
-heart.style.bottom="110vh";
-heart.style.opacity="0";
-},50);
-
-setTimeout(()=>{
-heart.remove();
-},3200);
-
-}
-
 function showReason(){
 
 tapCount++;
@@ -174,8 +144,6 @@ document.getElementById("number").innerText="🎉 COMPLETE";
 document.getElementById("reason").innerHTML=`
 
 <h2>ちゅー😽</h2>
-
-
 `;
 
 document.querySelector(".card").classList.add("complete");
@@ -191,9 +159,6 @@ const selectedReason=remainingReasons[randomIndex];
 remainingReasons.splice(randomIndex,1);
 
 document.getElementById("reason").innerText=selectedReason;
-
-document.getElementById("number").innerText=
-`♡ ${reasons.length-remainingReasons.length} / ${reasons.length}`;
 
 heart();
 
