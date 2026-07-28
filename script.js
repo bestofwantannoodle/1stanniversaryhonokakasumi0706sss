@@ -180,12 +180,6 @@ document.getElementById("reason").innerHTML=`
 
 document.querySelector(".card").classList.add("complete");
 
-for(let i=0;i<20;i++){
-
-setTimeout(heart,i*120);
-
-}
-
 return;
 
 }
@@ -211,14 +205,8 @@ Math.floor(Math.random()*specialMessages.length)
 ];
 
 showPopup(randomMessage);
-
 }
-
 }
-
-// ===============================
-// チェックボックス保存
-// ===============================
 
 window.onload=function(){
 
