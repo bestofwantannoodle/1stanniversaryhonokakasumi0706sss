@@ -160,8 +160,6 @@ remainingReasons.splice(randomIndex,1);
 
 document.getElementById("reason").innerText=selectedReason;
 
-heart();
-
 if(tapCount%10===0){
 
 const randomMessage=
