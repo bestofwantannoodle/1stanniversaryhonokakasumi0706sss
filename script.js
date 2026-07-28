@@ -7,8 +7,8 @@ const comment ="しゅき";
 //怒られてへこんでるほのかちゃんへ  
 // とても自業自得です
 // ざまあないです。
-// さて、内見はいつでもできるそうですが、    
-// いつがいいですか？
+// でもだいすきだよ    
+// 大好きだから許したよ
 // ===============================
 
 const reasons = [
@@ -199,7 +199,7 @@ remainingReasons.splice(randomIndex,1);
 document.getElementById("reason").innerText=selectedReason;
 
 document.getElementById("number").innerText=
-`💜 ${reasons.length-remainingReasons.length} / ${reasons.length}`;
+`♡ ${reasons.length-remainingReasons.length} / ${reasons.length}`;
 
 heart();
 
