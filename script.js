@@ -1,3 +1,5 @@
+const affection = 98.0;
+
 
 // ===============================
 // 
@@ -242,3 +244,12 @@ localStorage.setItem("check"+index,check.checked);
 });
 
 };
+
+document.getElementById("lovePercent").innerText =
+affection + "%";
+
+document.getElementById("loveComment").innerText =
+comment;
+
+document.getElementById("meterFill").style.width =
+affection + "%";
