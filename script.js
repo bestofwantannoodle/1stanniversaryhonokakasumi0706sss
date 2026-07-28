@@ -216,11 +216,6 @@ showPopup(randomMessage);
 
 }
 
-
-
-
-
-
 // ===============================
 // チェックボックス保存
 // ===============================
@@ -262,3 +257,56 @@ Math.min(affection,100) + "%";
 
 fill.innerText =
 affection + "%";
+
+// ===============================
+// 星空
+// ===============================
+
+const stars=document.getElementById("stars");
+
+if(stars){
+
+for(let i=0;i<180;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+const size=Math.random()*3+1;
+
+star.style.width=size+"px";
+star.style.height=size+"px";
+
+star.style.animationDelay=Math.random()*3+"s";
+
+stars.appendChild(star);
+
+}
+
+// Albireo（2つの星）
+const albireo1=document.createElement("div");
+albireo1.className="star";
+albireo1.style.width="7px";
+albireo1.style.height="7px";
+albireo1.style.left="72vw";
+albireo1.style.top="18vh";
+albireo1.style.background="#ffd54f";
+albireo1.style.opacity="1";
+
+const albireo2=document.createElement("div");
+albireo2.className="star";
+albireo2.style.width="5px";
+albireo2.style.height="5px";
+albireo2.style.left="73vw";
+albireo2.style.top="19vh";
+albireo2.style.background="#8fd3ff";
+albireo2.style.opacity="1";
+
+stars.appendChild(albireo1);
+stars.appendChild(albireo2);
+
+}
