@@ -11,7 +11,7 @@ body{
 
     overflow-x:hidden;
     position:relative;
-   min-heigt:100vh;
+   min-height:100vh;
    }
 
 /* 星空 */
@@ -205,8 +205,6 @@ backdrop-filter:blur(8px);
 padding:30px;
 
 border-radius:25px;
-
-.future-card{
 
 border:2px solid rgba(100,180,255,.35);
 
@@ -601,7 +599,7 @@ background:rgba(255,220,245,.12);
 }
 
 .future-card li span{
-    color:ffffff;
+    color:#ffffff;
     text-shadow:
     0 0 8px rgba(255,255,255,.35);
 }
