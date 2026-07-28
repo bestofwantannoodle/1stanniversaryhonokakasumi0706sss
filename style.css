@@ -596,13 +596,13 @@ margin:20px auto;
 
 }
 
-   .card,
 .future-card{
 background:rgba(255,220,245,.12);
 }
 
-.future-card span{
-    color:white;
+.future-card li span{
+    color:ffffff;
     text-shadow:
-    0 0 8px rgba(255,255,255,.4);
+    0 0 8px rgba(255,255,255,.35);
 }
+
