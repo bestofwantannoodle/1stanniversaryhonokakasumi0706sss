@@ -355,6 +355,8 @@ star.remove();
 setInterval(shootingStar,9000);
 
 
+
+
 // =========================
 // これからしたいこと チェック状態保存
 // =========================
@@ -388,4 +390,9 @@ checkboxes.forEach((checkbox, index) => {
 });
 
 document.getElementById("number").innerText =
+`♡ ${reasons.length-remainingReasons.length} / ${reasons.length}`;
+
+document.getElementById("number").innerText =
 `♡ 0 / ${reasons.length}`;
+
+
