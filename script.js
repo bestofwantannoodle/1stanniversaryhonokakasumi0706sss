@@ -354,11 +354,8 @@ star.remove();
 
 setInterval(shootingStar,9000);
 
-
-
-
 // =========================
-// これからしたいこと チェック状態保存
+// チェック保存
 // =========================
 
 const checkboxes = document.querySelectorAll(
