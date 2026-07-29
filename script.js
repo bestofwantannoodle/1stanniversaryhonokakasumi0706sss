@@ -386,3 +386,6 @@ checkboxes.forEach((checkbox, index) => {
   });
 
 });
+
+document.getElementById("number").innerText =
+`♡ 0 / ${reasons.length}`;
