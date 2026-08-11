@@ -1,4 +1,4 @@
-const affection = 100;
+const affection = 100.0;
 
 const comment ="しゅき";
 
